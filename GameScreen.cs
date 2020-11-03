@@ -57,10 +57,12 @@ namespace Escape_Room
             XmlReader reader = XmlReader.Create("Resources/level1.xml");
 
             reader.ReadStartElement("level");
+            reader.ReadToFollowing("tasks");
 
 
+            reader.ReadToFollowing("walls");
             //Grabs all the walla for the walls and adds them to the list
-            while (reader.ReadToFollowing("walls"))
+            while (reader.Read())
             {
                 if (reader.NodeType == XmlNodeType.Text)
                 {
