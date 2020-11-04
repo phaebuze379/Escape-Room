@@ -82,6 +82,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Task.cs" />
+    <Compile Include="taskScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="taskScreen.Designer.cs">
+      <DependentUpon>taskScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wall.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -99,6 +105,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="taskScreen.resx">
+      <DependentUpon>taskScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

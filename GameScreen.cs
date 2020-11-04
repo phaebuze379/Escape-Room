@@ -98,7 +98,7 @@ namespace Escape_Room
             string blockY;
             string width;
             string height;
-            
+
             string taskblockX;
             string taskblockY;
             string taskwidth;
@@ -191,12 +191,12 @@ namespace Escape_Room
             if (upArrowDown == true)
             {
                 hero.move("up");
-               
+
             }
             if (downArrowDown == true)
             {
                 hero.move("down");
-               
+
             }
 
             foreach (Wall c in walls)
@@ -213,19 +213,16 @@ namespace Escape_Room
                 if (hero.taskCollision(b))
                 {
                     stop = true;
-                    break;
-                    switch (taskColour)
-                    {
-                        case "red":
+                    leftArrowDown = false;
+                    rightArrowDown = false;
+                    upArrowDown = false;
+                    downArrowDown = false;
 
-                            break;
-                        case "blue":
-
-                            break;
-                        case "green":
-
-                            break;
-                    }
+                    taskScreen ts = new taskScreen();
+                    this.Controls.Add(ts);
+                   
+                    ts.Location = new Point((this.Width - ts.Width) / 2, (this.Height - ts.Height) / 2);
+                    ts.Focus();
                 }
             }
 
@@ -261,11 +258,11 @@ namespace Escape_Room
             }
             foreach (Task b in tasks)
             {
-                if(b.colour == "red")
+                if (b.colour == "red")
                 {
                     e.Graphics.FillRectangle(red, b.x, b.y, b.width, b.height);
                 }
-               else if (b.colour == "blue")
+                else if (b.colour == "blue")
                 {
                     e.Graphics.FillRectangle(blue, b.x, b.y, b.width, b.height);
                 }
@@ -273,7 +270,7 @@ namespace Escape_Room
                 {
                     e.Graphics.FillRectangle(green, b.x, b.y, b.width, b.height);
                 }
-               
+
 
             }
             e.Graphics.FillRectangle(green, hero.x, hero.y, hero.width, hero.height);
