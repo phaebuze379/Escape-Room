@@ -18,6 +18,7 @@ namespace Escape_Room
 
             MenuScreen ms = new MenuScreen();
             this.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }
