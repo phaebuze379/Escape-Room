@@ -136,23 +136,18 @@
     <None Include="Resources\room 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\walls.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Door 1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\Resources\level1.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Resources\walls.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\floor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\level1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

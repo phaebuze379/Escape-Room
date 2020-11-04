@@ -111,42 +111,6 @@ namespace Escape_Room.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;level&gt;
-        ///  &lt;tasks&gt;
-        ///    &lt;task&gt;
-        ///      &lt;x&gt; 70&lt;/x&gt;
-        ///      &lt;y&gt; 35&lt;/y&gt;
-        ///      &lt;width&gt; 50&lt;/width&gt;
-        ///      &lt;height&gt; 50&lt;/height&gt;
-        ///    &lt;/task&gt;
-        ///  &lt;/tasks&gt;
-        ///  &lt;walls&gt;
-        ///    &lt;wall&gt;
-        ///      &lt;x&gt; 35&lt;/x&gt;
-        ///      &lt;y&gt; 35&lt;/y&gt;
-        ///      &lt;width&gt; 1315&lt;/width&gt;
-        ///      &lt;height&gt; 5&lt;/height&gt;
-        ///    &lt;/wall&gt;
-        ///    &lt;wall&gt;
-        ///      &lt;x&gt; 35&lt;/x&gt;
-        ///      &lt;y&gt; 750&lt;/y&gt;
-        ///      &lt;width&gt; 1315&lt;/width&gt;
-        ///      &lt;height&gt; 5&lt;/height&gt;
-        ///    &lt;/wall&gt;
-        ///    &lt;wall&gt;
-        ///      &lt;x&gt; 35&lt;/x&gt;
-        ///      &lt;y&gt; 35&lt;/y&gt;
-        ///      &lt;width&gt; 5&lt;/width&gt;
-        ///      &lt;h [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string level1 {
-            get {
-                return ResourceManager.GetString("level1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap map {
@@ -183,30 +147,6 @@ namespace Escape_Room.Properties {
             get {
                 object obj = ResourceManager.GetObject("room_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-        ///&lt;level&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 50&lt;/x&gt;
-        ///    &lt;y&gt; 50&lt;/y&gt;
-        ///    &lt;width&gt; 826&lt;/width&gt;
-        ///    &lt;height&gt; 5&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 50&lt;/x&gt;
-        ///    &lt;y&gt; 700&lt;/y&gt;
-        ///    &lt;width&gt; 826&lt;/width&gt;
-        ///    &lt;height&gt; 5&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///&lt;/level&gt;
-        ///.
-        /// </summary>
-        internal static string walls {
-            get {
-                return ResourceManager.GetString("walls", resourceCulture);
             }
         }
     }

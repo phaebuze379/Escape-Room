@@ -265,18 +265,15 @@ namespace Escape_Room
                 {
                     e.Graphics.FillRectangle(red, b.x, b.y, b.width, b.height);
                 }
-                if (b.colour == "blue")
+               else if (b.colour == "blue")
                 {
                     e.Graphics.FillRectangle(blue, b.x, b.y, b.width, b.height);
                 }
-                if (b.colour == "green")
+                else if (b.colour == "green")
                 {
                     e.Graphics.FillRectangle(green, b.x, b.y, b.width, b.height);
                 }
-                else
-                {
-                    e.Graphics.FillRectangle(white, b.x, b.y, b.width, b.height);
-                }
+               
 
             }
             e.Graphics.FillRectangle(green, hero.x, hero.y, hero.width, hero.height);
