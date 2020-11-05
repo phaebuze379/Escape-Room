@@ -17,6 +17,9 @@ namespace Escape_Room
         Boolean pic3 = false;
         Boolean left = false;
 
+        Image duckLeft = Properties.Resources.duck___Copy;
+        Image duckRight = Properties.Resources.duck;
+
         int counter1 = 0;
         int counter2 = 0;
         int counter3 = 0;
@@ -27,6 +30,7 @@ namespace Escape_Room
         string colour1, colour2, colour3;
         public taskScreen()
         {
+            
             InitializeComponent();
             switch (GameScreen.taskColour)
             {
@@ -129,6 +133,10 @@ namespace Escape_Room
             duck2.Visible = true;
             duck3.Visible = true;
             duck4.Visible = true;
+            duck1.Image = duckRight;
+            duck2.Image = duckRight;
+            duck3.Image = duckRight;
+            duck4.Image = duckRight;
         }
 
         public void taskLightGreen()
@@ -344,10 +352,10 @@ namespace Escape_Room
                     }
                     break;
                 case "yellow":
-                    if (duck1.Image == Properties.Resources.duck___Copy &&
-                        duck2.Image == Properties.Resources.duck &&
-                        duck3.Image == Properties.Resources.duck &&
-                        duck4.Image == Properties.Resources.duck___Copy)
+                    if (duck1.Image == duckLeft &&
+                        duck2.Image == duckRight &&
+                        duck3.Image == duckRight &&
+                        duck4.Image == duckLeft)
                     {
                         GameScreen.taskCounter++;
                         foreach (Task t in GameScreen.tasks)
@@ -489,14 +497,14 @@ namespace Escape_Room
             counter1++;
             if (left == false)
             {
-                duck1.Image = Properties.Resources.duck___Copy;
+                duck1.Image = duckLeft;
                 left = true;
             }
 
             if (left == true && counter1 == 2)
             {
                 left = false;
-                duck1.Image = Properties.Resources.duck;
+                duck1.Image = duckRight;
                 counter1 = 0;
             }
         }
@@ -507,14 +515,14 @@ namespace Escape_Room
             counter1++;
             if (left == false)
             {
-                duck2.Image = Properties.Resources.duck___Copy;
+                duck2.Image = duckLeft;
                 left = true;
             }
 
             if (left == true && counter1 == 2)
             {
                 left = false;
-                duck2.Image = Properties.Resources.duck;
+                duck2.Image = duckRight;
                 counter1 = 0;
             }
         }
@@ -525,14 +533,14 @@ namespace Escape_Room
             counter1++;
             if (left == false)
             {
-                duck3.Image = Properties.Resources.duck___Copy;
+                duck3.Image = duckLeft;
                 left = true;
             }
 
             if (left == true && counter1 == 2)
             {
                 left = false;
-                duck3.Image = Properties.Resources.duck;
+                duck3.Image = duckRight;
                 counter1 = 0;
             }
         }
@@ -543,14 +551,14 @@ namespace Escape_Room
             counter1++;
             if (left == false)
             {
-                duck4.Image = Properties.Resources.duck___Copy;
+                duck4.Image = duckLeft;
                 left = true;
             }
 
             if (left == true && counter1 == 2)
             {
                 left = false;
-                duck4.Image = Properties.Resources.duck;
+                duck4.Image = duckRight;
                 counter1 = 0;
             }
         }

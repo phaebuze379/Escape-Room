@@ -316,7 +316,7 @@
             // duck1
             // 
             this.duck1.BackColor = System.Drawing.Color.Transparent;
-            this.duck1.Image = global::Escape_Room.Properties.Resources.duck;
+            this.duck1.Image = global::Escape_Room.Properties.Resources.Door_1;
             this.duck1.Location = new System.Drawing.Point(37, 195);
             this.duck1.Name = "duck1";
             this.duck1.Size = new System.Drawing.Size(148, 176);
@@ -329,7 +329,6 @@
             // duck2
             // 
             this.duck2.BackColor = System.Drawing.Color.Transparent;
-            this.duck2.Image = global::Escape_Room.Properties.Resources.duck;
             this.duck2.Location = new System.Drawing.Point(220, 195);
             this.duck2.Name = "duck2";
             this.duck2.Size = new System.Drawing.Size(148, 176);
@@ -342,7 +341,6 @@
             // duck3
             // 
             this.duck3.BackColor = System.Drawing.Color.Transparent;
-            this.duck3.Image = global::Escape_Room.Properties.Resources.duck;
             this.duck3.Location = new System.Drawing.Point(422, 195);
             this.duck3.Name = "duck3";
             this.duck3.Size = new System.Drawing.Size(148, 176);
@@ -355,7 +353,6 @@
             // duck4
             // 
             this.duck4.BackColor = System.Drawing.Color.Transparent;
-            this.duck4.Image = global::Escape_Room.Properties.Resources.duck;
             this.duck4.Location = new System.Drawing.Point(633, 195);
             this.duck4.Name = "duck4";
             this.duck4.Size = new System.Drawing.Size(148, 176);
