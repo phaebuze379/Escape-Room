@@ -15,10 +15,15 @@ namespace Escape_Room
         Boolean pic1 = false;
         Boolean pic2 = false;
         Boolean pic3 = false;
+        Boolean left = false;
 
         int counter1 = 0;
         int counter2 = 0;
         int counter3 = 0;
+
+        int leftCount = 0;
+        int rightCount = 0;
+
         string colour1, colour2, colour3;
         public taskScreen()
         {
@@ -41,6 +46,16 @@ namespace Escape_Room
                     taskTurquoise();
                     break;
                 case "black":
+                    taskBlack();
+                    break;
+                case "yellow":
+                    taskYellow();
+                    break;
+                case "lightgreen":
+                    taskLightGreen();
+                    break;
+                case "purple":
+                    taskPurple();
                     break;
 
 
@@ -100,29 +115,51 @@ namespace Escape_Room
             checkButton.Visible = true;
         }
 
+        public void taskBlack()
+        {
+            Label.Text = "DO NOT CLICK THE BUTTON ;)";
+            pictureBox1.Visible = true;
+        }
+
+        public void taskYellow()
+        {
+            Label.Text = "<--     -->      -->      <--";
+            checkButton.Visible = true;
+            duck1.Visible = true;
+            duck2.Visible = true;
+            duck3.Visible = true;
+            duck4.Visible = true;
+        }
+
+        public void taskLightGreen()
+        {
+            label1.Visible = true;
+            button4.Visible = true;
+            button5.Visible = true;
+            Label.Text = "L R R L R";
+        }
+
+        public void taskPurple()
+        {
+
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             pic1 = true;
             sunBox.BackColor = Color.Green;
-
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             pic2 = true;
             rainBox.BackColor = Color.Red;
-
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             pic3 = true;
             sunBox2.BackColor = Color.Green;
-
-
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -196,83 +233,142 @@ namespace Escape_Room
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void checkButton_Click(object sender, EventArgs e)
         {
-            foreach (Task t in GameScreen.tasks)
+            switch (GameScreen.taskColour)
             {
-                switch (t.colour)
-                {
-                    case "green":
-                        if (colour1 == "pink" && colour2 == "pink" && colour3 == "pink")
+                case "green":
+                    if (colour1 == "pink" && colour2 == "pink" && colour3 == "pink")
+                    {
+                        GameScreen.taskCounter++;
+                        foreach (Task t in GameScreen.tasks)
                         {
-                            GameScreen.taskCounter++;
+                            if (t.colour == "green")
+                            {
+                                GameScreen.tasks.Remove(t);
+                                break;
 
-                            GameScreen.tasks.Remove(t);
+                            }
+                            else
+                            {
 
-                            Form f = this.FindForm();
-                            f.Controls.Remove(this);
+                            }
+                        }
+                        Form f = this.FindForm();
+                        f.Controls.Remove(this);
+
+
+                    }
+                    break;
+                case "red":
+                    int code = Convert.ToInt32(textBox1.Text);
+                    if (code == 26793)
+                    {
+                        GameScreen.taskCounter++;
+                        foreach (Task t in GameScreen.tasks)
+                        {
+                            if (t.colour == "red")
+                            {
+                                GameScreen.tasks.Remove(t);
+                                break;
+                            }
+                            else
+                            {
+
+                            }
 
                         }
-                        break;
-                    case "red":
-                        int code = Convert.ToInt32(textBox1.Text);
-                        if (code == 26793)
+                        Form f = this.FindForm();
+                        f.Controls.Remove(this);
+
+                    }
+                    break;
+                case "blue":
+                    if (pic2 == true && pic1 == true)
+                    {
+                        pic1 = pic2 = pic3 = false;
+                        sunBox.BackColor = rainBox.BackColor = sunBox2.BackColor = Color.PaleTurquoise;
+                    }
+
+                    if (pic2 == true && pic3 == true)
+                    {
+
+                        pic1 = pic2 = pic3 = false;
+                        sunBox.BackColor = rainBox.BackColor = sunBox2.BackColor = Color.PaleTurquoise;
+                    }
+
+                    if (pic1 == true && pic3 == true)
+                    {
+                        GameScreen.taskCounter++;
+                        foreach (Task t in GameScreen.tasks)
                         {
-                            GameScreen.taskCounter++;
+                            if (t.colour == "blue")
+                            {
+                                GameScreen.tasks.Remove(t);
 
-                            GameScreen.tasks.Remove(t);
-                            break;
-                            Form f = this.FindForm();
-                            f.Controls.Remove(this);
+                                break;
+                            }
+                            else
+                            {
+
+                            }
                         }
-                        break;
-                    case "blue":
-                        if (pic2 == true && pic1 == true)
+
+                        Form f = this.FindForm();
+                        f.Controls.Remove(this);
+                    }
+                    break;
+                case "paleturquiose":
+                    int math = Convert.ToInt32(textBox1.Text);
+
+                    if (math == 6)
+                    {
+                        GameScreen.taskCounter++;
+                        foreach (Task t in GameScreen.tasks)
                         {
-                            pic1 = pic2 = pic3 = false;
-                            sunBox.BackColor = rainBox.BackColor = sunBox2.BackColor = Color.PaleTurquoise;
+                            if (t.colour == "paleturquiose")
+                            {
+                                GameScreen.tasks.Remove(t);
+                                break;
+                            }
+                            else
+                            {
+
+                            }
+
                         }
 
-                        if (pic2 == true && pic3 == true)
+                        Form f = this.FindForm();
+                        f.Controls.Remove(this);
+
+                    }
+                    break;
+                case "yellow":
+                    if (duck1.Image == Properties.Resources.duck___Copy &&
+                        duck2.Image == Properties.Resources.duck &&
+                        duck3.Image == Properties.Resources.duck &&
+                        duck4.Image == Properties.Resources.duck___Copy)
+                    {
+                        GameScreen.taskCounter++;
+                        foreach (Task t in GameScreen.tasks)
                         {
+                            if (t.colour == "yellow")
+                            {
+                                GameScreen.tasks.Remove(t);
+                                break;
+                            }
+                            else
+                            {
 
-                            pic1 = pic2 = pic3 = false;
-                            sunBox.BackColor = rainBox.BackColor = sunBox2.BackColor = Color.PaleTurquoise;
+                            }
+
                         }
 
-                        if (pic1 == true && pic3 == true)
-                        {
-                            GameScreen.taskCounter++;
-
-                            GameScreen.tasks.Remove(t);
-                            break;
-                            Form f = this.FindForm();
-                            f.Controls.Remove(this);
-                        }
-                        break;
-                    case "pink":
-                        break;
-                    case "paleturquiose":
-                        int math = Convert.ToInt32(textBox1.Text);
-
-                        if (math == 6)
-                        {
-                            GameScreen.taskCounter++;
-
-                            GameScreen.tasks.Remove(t);
-                            Form f = this.FindForm();
-                            f.Controls.Remove(this);
-                        }
-                        break;
-                    case "black":
-                        break;
-
-
-                }
+                        Form f = this.FindForm();
+                        f.Controls.Remove(this);
+                    }
+                    break;
             }
-
-
-
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
@@ -296,6 +392,168 @@ namespace Escape_Room
             f.Controls.Remove(this);
         }
 
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            GameScreen.taskCounter++;
+            foreach (Task t in GameScreen.tasks)
+            {
+                if (t.colour == "black")
+                {
+                    GameScreen.tasks.Remove(t);
+                    break;
+                }
+                else
+                {
+
+                }
+
+            }
+
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if (leftCount == 0)
+            {
+                label1.Text = "";
+                leftCount++;
+            }
+            else if (rightCount == 2 && leftCount == 1)
+            {
+                leftCount++;
+            }
+            else
+            {
+                leftCount++;
+            }
+
+            if (rightCount > 2 && leftCount > 2)
+            {
+                label1.Text = "wrong code";
+                leftCount = 0;
+                rightCount = 0;
+            }
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (leftCount == 1)
+            {
+                label1.Text = "";
+                rightCount++;
+            }
+            else if (rightCount == 2 && leftCount == 1)
+            {
+                leftCount++;
+            }
+            else if (leftCount == 2 && rightCount == 2)
+            {
+                GameScreen.taskCounter++;
+                foreach (Task t in GameScreen.tasks)
+                {
+                    if (t.colour == "lightgreen")
+                    {
+                        GameScreen.tasks.Remove(t);
+                        break;
+                    }
+                    else
+                    {
+
+                    }
+
+                }
+
+                Form f = this.FindForm();
+                f.Controls.Remove(this);
+            }
+            else
+            {
+                rightCount++;
+            }
+
+
+            if (rightCount > 2 && leftCount > 2)
+            {
+                label1.Text = "wrong code";
+                leftCount = 0;
+                rightCount = 0;
+            }
+        }
+
+        private void duck1_Click(object sender, EventArgs e)
+        {
+
+            counter1++;
+            if (left == false)
+            {
+                duck1.Image = Properties.Resources.duck___Copy;
+                left = true;
+            }
+
+            if (left == true && counter1 == 2)
+            {
+                left = false;
+                duck1.Image = Properties.Resources.duck;
+                counter1 = 0;
+            }
+        }
+
+        private void duck2_Click(object sender, EventArgs e)
+        {
+
+            counter1++;
+            if (left == false)
+            {
+                duck2.Image = Properties.Resources.duck___Copy;
+                left = true;
+            }
+
+            if (left == true && counter1 == 2)
+            {
+                left = false;
+                duck2.Image = Properties.Resources.duck;
+                counter1 = 0;
+            }
+        }
+
+        private void duck3_Click(object sender, EventArgs e)
+        {
+
+            counter1++;
+            if (left == false)
+            {
+                duck3.Image = Properties.Resources.duck___Copy;
+                left = true;
+            }
+
+            if (left == true && counter1 == 2)
+            {
+                left = false;
+                duck3.Image = Properties.Resources.duck;
+                counter1 = 0;
+            }
+        }
+
+        private void duck4_Click(object sender, EventArgs e)
+        {
+
+            counter1++;
+            if (left == false)
+            {
+                duck4.Image = Properties.Resources.duck___Copy;
+                left = true;
+            }
+
+            if (left == true && counter1 == 2)
+            {
+                left = false;
+                duck4.Image = Properties.Resources.duck;
+                counter1 = 0;
+            }
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {

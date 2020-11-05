@@ -46,6 +46,14 @@
             this.doorBox6 = new System.Windows.Forms.PictureBox();
             this.doorBox3 = new System.Windows.Forms.PictureBox();
             this.doorBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.duck1 = new System.Windows.Forms.PictureBox();
+            this.duck2 = new System.Windows.Forms.PictureBox();
+            this.duck3 = new System.Windows.Forms.PictureBox();
+            this.duck4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sunBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunBox)).BeginInit();
@@ -56,6 +64,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck4)).BeginInit();
             this.SuspendLayout();
             // 
             // exitButton
@@ -120,7 +133,7 @@
             this.checkButton.Text = "CHECK";
             this.checkButton.UseVisualStyleBackColor = true;
             this.checkButton.Visible = false;
-            this.checkButton.Click += new System.EventHandler(this.button5_Click);
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
             // sunBox2
             // 
@@ -174,7 +187,7 @@
             // doorBox1
             // 
             this.doorBox1.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox1.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox1.Image = ((System.Drawing.Image)(resources.GetObject("doorBox1.Image")));
             this.doorBox1.Location = new System.Drawing.Point(323, 140);
             this.doorBox1.Name = "doorBox1";
             this.doorBox1.Size = new System.Drawing.Size(128, 168);
@@ -186,7 +199,7 @@
             // doorBox4
             // 
             this.doorBox4.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox4.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox4.Image = ((System.Drawing.Image)(resources.GetObject("doorBox4.Image")));
             this.doorBox4.Location = new System.Drawing.Point(297, 272);
             this.doorBox4.Name = "doorBox4";
             this.doorBox4.Size = new System.Drawing.Size(148, 176);
@@ -211,7 +224,7 @@
             // doorBox5
             // 
             this.doorBox5.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox5.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox5.Image = ((System.Drawing.Image)(resources.GetObject("doorBox5.Image")));
             this.doorBox5.Location = new System.Drawing.Point(240, 347);
             this.doorBox5.Name = "doorBox5";
             this.doorBox5.Size = new System.Drawing.Size(148, 176);
@@ -223,7 +236,7 @@
             // doorBox6
             // 
             this.doorBox6.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox6.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox6.Image = ((System.Drawing.Image)(resources.GetObject("doorBox6.Image")));
             this.doorBox6.Location = new System.Drawing.Point(465, 347);
             this.doorBox6.Name = "doorBox6";
             this.doorBox6.Size = new System.Drawing.Size(148, 176);
@@ -235,7 +248,7 @@
             // doorBox3
             // 
             this.doorBox3.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox3.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox3.Image = ((System.Drawing.Image)(resources.GetObject("doorBox3.Image")));
             this.doorBox3.Location = new System.Drawing.Point(448, 165);
             this.doorBox3.Name = "doorBox3";
             this.doorBox3.Size = new System.Drawing.Size(148, 176);
@@ -247,7 +260,7 @@
             // doorBox2
             // 
             this.doorBox2.BackColor = System.Drawing.Color.Transparent;
-            this.doorBox2.Image = global::Escape_Room.Properties.Resources.Door_1;
+            this.doorBox2.Image = ((System.Drawing.Image)(resources.GetObject("doorBox2.Image")));
             this.doorBox2.Location = new System.Drawing.Point(191, 183);
             this.doorBox2.Name = "doorBox2";
             this.doorBox2.Size = new System.Drawing.Size(126, 178);
@@ -256,11 +269,115 @@
             this.doorBox2.TabStop = false;
             this.doorBox2.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Escape_Room.Properties.Resources.button_red;
+            this.pictureBox1.Location = new System.Drawing.Point(294, 217);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 155);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DarkGray;
+            this.button4.Location = new System.Drawing.Point(191, 272);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 69);
+            this.button4.TabIndex = 23;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DarkGray;
+            this.button5.Location = new System.Drawing.Point(451, 272);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(119, 69);
+            this.button5.TabIndex = 24;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Visible = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gabriola", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(246, 423);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 81);
+            this.label1.TabIndex = 25;
+            this.label1.Visible = false;
+            // 
+            // duck1
+            // 
+            this.duck1.BackColor = System.Drawing.Color.Transparent;
+            this.duck1.Image = global::Escape_Room.Properties.Resources.duck;
+            this.duck1.Location = new System.Drawing.Point(37, 195);
+            this.duck1.Name = "duck1";
+            this.duck1.Size = new System.Drawing.Size(148, 176);
+            this.duck1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.duck1.TabIndex = 26;
+            this.duck1.TabStop = false;
+            this.duck1.Visible = false;
+            this.duck1.Click += new System.EventHandler(this.duck1_Click);
+            // 
+            // duck2
+            // 
+            this.duck2.BackColor = System.Drawing.Color.Transparent;
+            this.duck2.Image = global::Escape_Room.Properties.Resources.duck;
+            this.duck2.Location = new System.Drawing.Point(220, 195);
+            this.duck2.Name = "duck2";
+            this.duck2.Size = new System.Drawing.Size(148, 176);
+            this.duck2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.duck2.TabIndex = 27;
+            this.duck2.TabStop = false;
+            this.duck2.Visible = false;
+            this.duck2.Click += new System.EventHandler(this.duck2_Click);
+            // 
+            // duck3
+            // 
+            this.duck3.BackColor = System.Drawing.Color.Transparent;
+            this.duck3.Image = global::Escape_Room.Properties.Resources.duck;
+            this.duck3.Location = new System.Drawing.Point(422, 195);
+            this.duck3.Name = "duck3";
+            this.duck3.Size = new System.Drawing.Size(148, 176);
+            this.duck3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.duck3.TabIndex = 28;
+            this.duck3.TabStop = false;
+            this.duck3.Visible = false;
+            this.duck3.Click += new System.EventHandler(this.duck3_Click);
+            // 
+            // duck4
+            // 
+            this.duck4.BackColor = System.Drawing.Color.Transparent;
+            this.duck4.Image = global::Escape_Room.Properties.Resources.duck;
+            this.duck4.Location = new System.Drawing.Point(633, 195);
+            this.duck4.Name = "duck4";
+            this.duck4.Size = new System.Drawing.Size(148, 176);
+            this.duck4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.duck4.TabIndex = 29;
+            this.duck4.TabStop = false;
+            this.duck4.Visible = false;
+            this.duck4.Click += new System.EventHandler(this.duck4_Click);
+            // 
             // taskScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.duck4);
+            this.Controls.Add(this.duck3);
+            this.Controls.Add(this.duck2);
+            this.Controls.Add(this.duck1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.doorBox2);
             this.Controls.Add(this.doorBox3);
             this.Controls.Add(this.doorBox6);
@@ -291,6 +408,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.doorBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doorBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.duck4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,5 +437,13 @@
         private System.Windows.Forms.PictureBox doorBox6;
         private System.Windows.Forms.PictureBox doorBox3;
         private System.Windows.Forms.PictureBox doorBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox duck1;
+        private System.Windows.Forms.PictureBox duck2;
+        private System.Windows.Forms.PictureBox duck3;
+        private System.Windows.Forms.PictureBox duck4;
     }
 }

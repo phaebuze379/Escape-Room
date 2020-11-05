@@ -191,5 +191,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EsacpeKey3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\duck - Copy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

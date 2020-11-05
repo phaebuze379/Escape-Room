@@ -63,9 +63,9 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backgroundMap {
+        internal static System.Drawing.Bitmap button_red {
             get {
-                object obj = ResourceManager.GetObject("backgroundMap", resourceCulture);
+                object obj = ResourceManager.GetObject("button_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,49 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Door_3 {
+            get {
+                object obj = ResourceManager.GetObject("Door_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Door2__1_ {
             get {
                 object obj = ResourceManager.GetObject("Door2__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duck {
+            get {
+                object obj = ResourceManager.GetObject("duck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duck___Copy {
+            get {
+                object obj = ResourceManager.GetObject("duck___Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EsacpeKey3 {
+            get {
+                object obj = ResourceManager.GetObject("EsacpeKey3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -192,33 +232,29 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;level&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 35&lt;/x&gt;
-        ///    &lt;y&gt; 35&lt;/y&gt;
-        ///    &lt;width&gt; 1315&lt;/width&gt;
-        ///    &lt;height&gt; 5&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 35&lt;/x&gt;
-        ///    &lt;y&gt; 750&lt;/y&gt;
-        ///    &lt;width&gt; 1315&lt;/width&gt;
-        ///    &lt;height&gt; 5&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 35&lt;/x&gt;
-        ///    &lt;y&gt; 35&lt;/y&gt;
-        ///    &lt;width&gt; 5&lt;/width&gt;
-        ///    &lt;height&gt; 715&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 1350&lt;/x&gt;
-        ///    &lt;y&gt; 35&lt;/y&gt;
-        ///    &lt;width&gt; 5&lt;/width&gt;
-        ///    &lt;height&gt; 720&lt;/height&gt;
-        ///  &lt;/wall&gt;
-        ///  &lt;wall&gt;
-        ///    &lt;x&gt; 1350&lt;/x&gt;
-        ///    &lt;y&gt; 35&lt;/y&gt;
+        ///  &lt;tasks&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;yellow&lt;/colour&gt;
+        ///      &lt;x&gt;300&lt;/x&gt;
+        ///      &lt;y&gt;400&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;lightgreen&lt;/colour&gt;
+        ///      &lt;x&gt;1000&lt;/x&gt;
+        ///      &lt;y&gt;300&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;purple&lt;/colour&gt;
+        ///      &lt;x&gt;1000&lt;/x&gt;
+        ///      &lt;y&gt;500&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///  &lt;/tasks&gt;
         ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Level3 {

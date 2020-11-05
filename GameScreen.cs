@@ -29,6 +29,9 @@ namespace Escape_Room
         SolidBrush pink = new SolidBrush(Color.Pink);
         SolidBrush black = new SolidBrush(Color.Black);
         SolidBrush gray = new SolidBrush(Color.Gray);
+        SolidBrush yellow = new SolidBrush(Color.Yellow);
+        SolidBrush lightGreen = new SolidBrush(Color.MediumSpringGreen);
+        SolidBrush purple = new SolidBrush(Color.Purple);
 
 
 
@@ -43,10 +46,10 @@ namespace Escape_Room
         public Door door;
         public Key key;
 
-        public static int taskCounter = 3;
+        public static int taskCounter = 2;
         public static string taskColour;
 
-        public static int levelCounter = 2;
+        public static int levelCounter = 3;
 
         public GameScreen()
         {
@@ -103,18 +106,40 @@ namespace Escape_Room
             //set all button presses to false.
             leftArrowDown = rightArrowDown = false;
 
-            door = new Door(1100, 40, 180, 230);
+            switch (levelCounter)
+            {
+                case 1:
+                    door = new Door(1100, 40, 180, 230);
+                    break;
+                case 2:
+                    door = new Door(600, 525, 180, 230);
+                    break;
+                case 3:
+                    door = new Door(585 , 325, 180, 230);
+                    break;
+            }
 
-            hero = new Hero(600, 400, 30, 50);
+            switch (levelCounter)
+            {
+                case 1:
+                    hero = new Hero(600, 400, 30, 50);
+                    break;
+                case 2:
+                    hero = new Hero(600, 400, 30, 50);
+                    break;
+                case 3:
+                    hero = new Hero(1000, 60, 30, 50);
+                    break;
+            }
             level();
         }
 
         public void level()
         {
-            // current level
-            taskCounter = 0;
+            //current level
+            complete = false;
 
-            // variables for block x and y values
+            //variables for block x and y values
             string blockX;
             string blockY;
             string width;
@@ -224,23 +249,29 @@ namespace Escape_Room
 
             }
 
-            if (complete == false)
-            {
-                tasksLabel.Text = 3 - taskCounter + "";
 
-            }
-            else
-            {
-                tasksLabel.Text = 0 + "";
-            }
+            tasksLabel.Text = tasks.Count() + "";
 
-            if (taskCounter == 3)
+
+
+            if (tasks.Count() == 0 && complete == false)
             {
                 complete = true;
-                key = new Key(500, 500, 70, 70);
+                switch (levelCounter)
+                {
+                    case 1:
+                        key = new Key(600, 535, 70, 70);
+                        break;
+                    case 2:
+                        key = new Key(1000, 60, 70, 70);
+                        break;
+                    case 3:
+                        key = new Key(1000, 60, 70, 70);
+                        break;
+                }
                 hero.hasKey = true;
-                taskCounter = 0;
-                
+                tasks.Clear();
+
             }
 
 
@@ -266,7 +297,7 @@ namespace Escape_Room
                 tasks.Clear();
                 taskCounter = 3;
                 onStart();
-                level();
+
             }
 
 
@@ -297,9 +328,9 @@ namespace Escape_Room
                     f.Controls.Add(ts);
 
                     ts.Location = new Point((this.Width - ts.Width) / 2, (this.Height - ts.Height) / 2);
-                    
-                    ts.BringToFront();
+
                     ts.Focus();
+                    ts.BringToFront();
                 }
             }
 
@@ -345,6 +376,11 @@ namespace Escape_Room
                     }
                     break;
                 case 3:
+                    e.Graphics.DrawImage(door.doorImage3, door.x, door.y, door.width, door.height);
+                    if (hero.hasKey == true)
+                    {
+                        e.Graphics.DrawImage(key.keyImage3, key.x, key.y, key.width, key.height);
+                    }
                     break;
             }
 
@@ -375,9 +411,18 @@ namespace Escape_Room
                     case "black":
                         e.Graphics.FillRectangle(black, b.x, b.y, b.width, b.height);
                         break;
+                    case "yellow":
+                        e.Graphics.FillRectangle(yellow, b.x, b.y, b.width, b.height);
+                        break;
+                    case "lightgreen":
+                        e.Graphics.FillRectangle(lightGreen, b.x, b.y, b.width, b.height);
+                        break;
+                    case "purple":
+                        e.Graphics.FillRectangle(purple, b.x, b.y, b.width, b.height);
+                        break;
 
                 }
-                
+
 
             }
 
