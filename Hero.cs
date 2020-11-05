@@ -10,7 +10,9 @@ namespace Escape_Room
     public class Hero
     {
         public int x, y, width, height;
-        public int speed = 50;
+
+        public Boolean hasKey = false;
+       
 
         public static string direction;
 
@@ -53,6 +55,16 @@ namespace Escape_Room
             return wall.IntersectsWith(hero);
         }
 
+        public Boolean doorCollision(Door d)
+        {
+            Rectangle hero = new Rectangle(x, y, width, height);
+            Rectangle door = new Rectangle(d.x, d.y, d.width, d.height);
+
+
+
+            return door.IntersectsWith(hero);
+        }
+
         public Boolean taskCollision(Task b)
         {
             Rectangle hero = new Rectangle(x, y, width, height);
@@ -61,6 +73,21 @@ namespace Escape_Room
 
 
             return task.IntersectsWith(hero);
+        }
+
+        public Boolean keyCollision(Key k)
+        {
+            if (hasKey == true)
+            {
+                Rectangle hero = new Rectangle(x, y, width, height);
+                Rectangle key = new Rectangle(k.x, k.y, k.width, k.height);
+                return key.IntersectsWith(hero);
+            }
+
+            else{
+                return (false);
+            }
+           
         }
     }
    

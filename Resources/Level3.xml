@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <tasks>
+    <task>
+      <colour>pink</colour>
+      <x>100</x>
+      <y>600</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+    <task>
+      <colour>paleturquiose</colour>
+      <x>600</x>
+      <y>60</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+    <task>
+      <colour>black</colour>
+      <x>1000</x>
+      <y>600</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+  </tasks>
+  <walls>
+  <wall>
+    <x> 35</x>
+    <y> 35</y>
+    <width> 1315</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 35</x>
+    <y> 750</y>
+    <width> 1315</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 35</x>
+    <y> 35</y>
+    <width> 5</width>
+    <height> 715</height>
+  </wall>
+  <wall>
+    <x> 1350</x>
+    <y> 35</y>
+    <width> 5</width>
+    <height> 720</height>
+  </wall>
+  <wall>
+    <x> 1350</x>
+    <y> 35</y>
+    <width> 5</width>
+    <height> 720</height>
+  </wall>
+  <wall>
+    <x> 900</x>
+    <y> 200</y>
+    <width> 5</width>
+    <height> 450</height>
+  </wall>
+  <wall>
+    <x> 900</x>
+    <y> 200</y>
+    <width> 300</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 900</x>
+    <y> 650</y>
+    <width> 300</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 450</x>
+    <y> 200</y>
+    <width> 5</width>
+    <height> 455</height>
+  </wall>
+  <wall>
+    <x> 150</x>
+    <y>200 </y>
+    <width> 300</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 150</x>
+    <y>650</y>
+    <width> 300</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 560</x>
+    <y>600</y>
+    <width> 250</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 560</x>
+    <y>250</y>
+    <width> 250</width>
+    <height> 5</height>
+  </wall>
+  <wall>
+    <x> 560</x>
+    <y>250</y>
+    <width> 5</width>
+    <height> 125</height>
+  </wall>
+  <wall>
+    <x> 805</x>
+    <y>250</y>
+    <width> 5</width>
+    <height> 125</height>
+  </wall>
+  <wall>
+    <x> 805</x>
+    <y>480</y>
+    <width> 5</width>
+    <height> 125</height>
+  </wall>
+  <wall>
+    <x> 560</x>
+    <y>480</y>
+    <width> 5</width>
+    <height> 125</height>
+  </wall>
+  </walls>
+</level>

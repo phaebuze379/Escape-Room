@@ -73,29 +73,39 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap button_2 {
-            get {
-                object obj = ResourceManager.GetObject("button_2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap button1 {
-            get {
-                object obj = ResourceManager.GetObject("button1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Door_1 {
             get {
                 object obj = ResourceManager.GetObject("Door_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Door2__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Door2__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EscapeKey1__2_ {
+            get {
+                object obj = ResourceManager.GetObject("EscapeKey1__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EscapeKey2 {
+            get {
+                object obj = ResourceManager.GetObject("EscapeKey2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +156,78 @@ namespace Escape_Room.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;level&gt;
+        ///  &lt;tasks&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;pink&lt;/colour&gt;
+        ///      &lt;x&gt;100&lt;/x&gt;
+        ///      &lt;y&gt;600&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;paleturquiose&lt;/colour&gt;
+        ///      &lt;x&gt;600&lt;/x&gt;
+        ///      &lt;y&gt;60&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///    &lt;task&gt;
+        ///      &lt;colour&gt;black&lt;/colour&gt;
+        ///      &lt;x&gt;1000&lt;/x&gt;
+        ///      &lt;y&gt;600&lt;/y&gt;
+        ///      &lt;width&gt;50&lt;/width&gt;
+        ///      &lt;height&gt;50&lt;/height&gt;
+        ///    &lt;/task&gt;
+        ///  &lt;/tasks&gt;
+        ///  &lt;w [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Level2 {
+            get {
+                return ResourceManager.GetString("Level2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;level&gt;
+        ///  &lt;wall&gt;
+        ///    &lt;x&gt; 35&lt;/x&gt;
+        ///    &lt;y&gt; 35&lt;/y&gt;
+        ///    &lt;width&gt; 1315&lt;/width&gt;
+        ///    &lt;height&gt; 5&lt;/height&gt;
+        ///  &lt;/wall&gt;
+        ///  &lt;wall&gt;
+        ///    &lt;x&gt; 35&lt;/x&gt;
+        ///    &lt;y&gt; 750&lt;/y&gt;
+        ///    &lt;width&gt; 1315&lt;/width&gt;
+        ///    &lt;height&gt; 5&lt;/height&gt;
+        ///  &lt;/wall&gt;
+        ///  &lt;wall&gt;
+        ///    &lt;x&gt; 35&lt;/x&gt;
+        ///    &lt;y&gt; 35&lt;/y&gt;
+        ///    &lt;width&gt; 5&lt;/width&gt;
+        ///    &lt;height&gt; 715&lt;/height&gt;
+        ///  &lt;/wall&gt;
+        ///  &lt;wall&gt;
+        ///    &lt;x&gt; 1350&lt;/x&gt;
+        ///    &lt;y&gt; 35&lt;/y&gt;
+        ///    &lt;width&gt; 5&lt;/width&gt;
+        ///    &lt;height&gt; 720&lt;/height&gt;
+        ///  &lt;/wall&gt;
+        ///  &lt;wall&gt;
+        ///    &lt;x&gt; 1350&lt;/x&gt;
+        ///    &lt;y&gt; 35&lt;/y&gt;
+        ///   [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Level3 {
+            get {
+                return ResourceManager.GetString("Level3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap map {
@@ -168,9 +250,9 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap room_1 {
+        internal static System.Drawing.Bitmap rain {
             get {
-                object obj = ResourceManager.GetObject("room_1", resourceCulture);
+                object obj = ResourceManager.GetObject("rain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -178,9 +260,9 @@ namespace Escape_Room.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap room_3 {
+        internal static System.Drawing.Bitmap sun {
             get {
-                object obj = ResourceManager.GetObject("room_3", resourceCulture);
+                object obj = ResourceManager.GetObject("sun", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

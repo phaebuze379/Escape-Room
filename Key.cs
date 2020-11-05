@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Escape_Room
 {
-    public class Task
+    public class Key
     {
         public int x, y, width, height;
-        public  string colour;
 
-        public Task(string _colour, int _x, int _y, int _width, int _height)
+        public Image keyImage1 = Properties.Resources.EscapeKey1__2_;
+        public Image keyImage2 = Properties.Resources.EscapeKey2;
+
+        public Key(int _x, int _y, int _width, int _height)
         {
-            colour = _colour;
             x = _x;
             y = _y;
             width = _width;

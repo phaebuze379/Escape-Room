@@ -19,18 +19,34 @@ namespace Escape_Room
     {
         Boolean leftArrowDown, rightArrowDown, upArrowDown, downArrowDown;
         Boolean stop = false;
+        Boolean complete = false;
 
         SolidBrush white = new SolidBrush(Color.White);
         SolidBrush red = new SolidBrush(Color.Red);
         SolidBrush green = new SolidBrush(Color.Green);
         SolidBrush blue = new SolidBrush(Color.Blue);
+        SolidBrush paleTurquoise = new SolidBrush(Color.PaleTurquoise);
+        SolidBrush pink = new SolidBrush(Color.Pink);
+        SolidBrush black = new SolidBrush(Color.Black);
+        SolidBrush gray = new SolidBrush(Color.Gray);
 
-        List<Wall> walls = new List<Wall>();
-        List<Task> tasks = new List<Task>();
+
+
+        public static List<Wall> walls = new List<Wall>();
+        public static List<Task> tasks = new List<Task>();
+
+        public static List<Key> keys = new List<Key>();
+        public static List<Key> inventory = new List<Key>();
 
         public Hero hero;
 
-        public string taskColour;
+        public Door door;
+        public Key key;
+
+        public static int taskCounter = 3;
+        public static string taskColour;
+
+        public static int levelCounter = 2;
 
         public GameScreen()
         {
@@ -82,16 +98,21 @@ namespace Escape_Room
 
         public void onStart()
         {
+
+
             //set all button presses to false.
             leftArrowDown = rightArrowDown = false;
+
+            door = new Door(1100, 40, 180, 230);
+
             hero = new Hero(600, 400, 30, 50);
-            levelOne();
+            level();
         }
 
-        public void levelOne()
+        public void level()
         {
             // current level
-
+            taskCounter = 0;
 
             // variables for block x and y values
             string blockX;
@@ -103,17 +124,19 @@ namespace Escape_Room
             string taskblockY;
             string taskwidth;
             string taskheight;
+
             int intX;
             int intY;
             int widthx;
             int heighty;
+
             int taskintX;
             int taskintY;
             int taskwidthx;
             int taskheighty;
 
             // create xml reader
-            XmlReader reader = XmlReader.Create("Resources/level1.xml");
+            XmlReader reader = XmlReader.Create("Resources/" + "level" + Convert.ToString(levelCounter) + ".xml");
 
             int c = 0;
             reader.ReadStartElement("level");
@@ -134,7 +157,7 @@ namespace Escape_Room
 
                 reader.ReadToFollowing("height");
                 taskheight = reader.ReadString();
-                if (taskblockX != "")
+                if (taskColour != "")
                 {
                     taskintX = Convert.ToInt32(taskblockX);
                     taskintY = Convert.ToInt32(taskblockY);
@@ -178,8 +201,10 @@ namespace Escape_Room
         }
 
 
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             if (leftArrowDown == true)
             {
                 hero.move("left");
@@ -198,6 +223,53 @@ namespace Escape_Room
                 hero.move("down");
 
             }
+
+            if (complete == false)
+            {
+                tasksLabel.Text = 3 - taskCounter + "";
+
+            }
+            else
+            {
+                tasksLabel.Text = 0 + "";
+            }
+
+            if (taskCounter == 3)
+            {
+                complete = true;
+                key = new Key(500, 500, 70, 70);
+                hero.hasKey = true;
+                taskCounter = 0;
+                
+            }
+
+
+            if (hero.keyCollision(key))
+            {
+                key.x = 390;
+                key.y = 790;
+                stop = true;
+            }
+
+            if (hero.doorCollision(door) && hero.hasKey == false)
+            {
+                stop = true;
+            }
+
+            if (hero.doorCollision(door) && hero.hasKey == true)
+            {
+
+                stop = true;
+                hero.hasKey = false;
+                levelCounter++;
+                walls.Clear();
+                tasks.Clear();
+                taskCounter = 3;
+                onStart();
+                level();
+            }
+
+
 
             foreach (Wall c in walls)
             {
@@ -218,10 +290,15 @@ namespace Escape_Room
                     upArrowDown = false;
                     downArrowDown = false;
 
+                    taskColour = b.colour;
+
+                    Form f = this.FindForm();
                     taskScreen ts = new taskScreen();
-                    this.Controls.Add(ts);
-                   
+                    f.Controls.Add(ts);
+
                     ts.Location = new Point((this.Width - ts.Width) / 2, (this.Height - ts.Height) / 2);
+                    
+                    ts.BringToFront();
                     ts.Focus();
                 }
             }
@@ -251,6 +328,26 @@ namespace Escape_Room
         }
         public void GameScreen_Paint(object sender, PaintEventArgs e)
         {
+            switch (levelCounter)
+            {
+                case 1:
+                    e.Graphics.DrawImage(door.doorImage1, door.x, door.y, door.width, door.height);
+                    if (hero.hasKey == true)
+                    {
+                        e.Graphics.DrawImage(key.keyImage1, key.x, key.y, key.width, key.height);
+                    }
+                    break;
+                case 2:
+                    e.Graphics.DrawImage(door.doorImage2, door.x, door.y, door.width, door.height);
+                    if (hero.hasKey == true)
+                    {
+                        e.Graphics.DrawImage(key.keyImage2, key.x, key.y, key.width, key.height);
+                    }
+                    break;
+                case 3:
+                    break;
+            }
+
             foreach (Wall b in walls)
             {
                 e.Graphics.FillRectangle(white, b.x, b.y, b.width, b.height);
@@ -258,22 +355,33 @@ namespace Escape_Room
             }
             foreach (Task b in tasks)
             {
-                if (b.colour == "red")
+                switch (b.colour)
                 {
-                    e.Graphics.FillRectangle(red, b.x, b.y, b.width, b.height);
-                }
-                else if (b.colour == "blue")
-                {
-                    e.Graphics.FillRectangle(blue, b.x, b.y, b.width, b.height);
-                }
-                else if (b.colour == "green")
-                {
-                    e.Graphics.FillRectangle(green, b.x, b.y, b.width, b.height);
-                }
+                    case "red":
+                        e.Graphics.FillRectangle(red, b.x, b.y, b.width, b.height);
+                        break;
+                    case "green":
+                        e.Graphics.FillRectangle(green, b.x, b.y, b.width, b.height);
+                        break;
+                    case "blue":
+                        e.Graphics.FillRectangle(blue, b.x, b.y, b.width, b.height);
+                        break;
+                    case "paleturquiose":
+                        e.Graphics.FillRectangle(paleTurquoise, b.x, b.y, b.width, b.height);
+                        break;
+                    case "pink":
+                        e.Graphics.FillRectangle(pink, b.x, b.y, b.width, b.height);
+                        break;
+                    case "black":
+                        e.Graphics.FillRectangle(black, b.x, b.y, b.width, b.height);
+                        break;
 
+                }
+                
 
             }
-            e.Graphics.FillRectangle(green, hero.x, hero.y, hero.width, hero.height);
+
+            e.Graphics.FillRectangle(gray, hero.x, hero.y, hero.width, hero.height);
         }
     }
 }
