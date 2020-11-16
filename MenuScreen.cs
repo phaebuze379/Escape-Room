@@ -13,22 +13,49 @@ namespace Escape_Room
 {
     public partial class MenuScreen : UserControl
     {
+
         public MenuScreen()
         {
             InitializeComponent();
+            #region write
+            GameOverScreen.scores.Clear();
+            string playerName, playerScore;
+            int scores;
+
+            XmlReader reader = XmlReader.Create("Resources/high.xml");
+
+            reader.ReadStartElement("scores");
+            //Grabs all the walla for the walls and adds them to the list
+            while (reader.Read())
+            {
+                if (reader.NodeType == XmlNodeType.Text)
+                {
+                    playerName = reader.ReadString();
+
+                    reader.ReadToFollowing("score");
+                    playerScore = reader.ReadString();
+
+                    scores = Convert.ToInt32(playerScore);
+                    if (playerName != "")
+                    {
+                        Score score = new Score(playerScore, playerName);
+                        GameOverScreen.scores.Add(score);
+                    }
+                }
+            }
+            //close reader
+            reader.Close();
+            #endregion
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form f = this.FindForm();
             f.Controls.Remove(this);
-
-            //GameScreen gs = new GameScreen();
-            //f.Controls.Add(gs);
-            //gs.Focus();
-            GameOverScreen gs = new GameOverScreen();
+            GameScreen gs = new GameScreen();
             f.Controls.Add(gs);
             gs.Focus();
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -51,45 +78,14 @@ namespace Escape_Room
 
             scoresLabel.Visible = true;
 
-            string playerName;
-            string playScore;
-
-            int playerScore;
-
-            XmlReader reader = XmlReader.Create("Resources/highScores.xml");
-
-            reader.ReadStartElement("score");
-
-            //Grabs all the walla for the walls and adds them to the list
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Text)
-                {
-                   reader.ReadToFollowing("name");
-                    playerName = reader.ReadString();
-
-                    reader.ReadToFollowing("score");
-                    playScore = reader.ReadString();
-
-
-                    if (playerName != "")
-                    {
-                        playerScore = Convert.ToInt32(playScore);
-
-                        Score score = new Score(playerScore, playerName);
-
-                        GameOverScreen.scores.Add(score);
-                    }
-                }
-            }
-            //close reader
-            reader.Close();
-
+            scoresLabel.Text = "";
+            GameOverScreen.scores = GameOverScreen.scores.OrderBy(x => x.score).ToList();
             foreach (Score s in GameOverScreen.scores)
             {
-                scoresLabel.Text += s;
+                scoresLabel.Text += s.name + "   " + s.score + "\n";
             }
 
+            
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -106,6 +102,21 @@ namespace Escape_Room
             backButton.Visible = false;
 
             scoresLabel.Visible = false;
+        }
+
+        private void playButton_Enter(object sender, EventArgs e)
+        {
+           // playButton.BackColor = 
+        }
+
+        private void highButton_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

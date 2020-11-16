@@ -236,10 +236,14 @@
     <None Include="Resources\key.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="highScores.xml" />
+    <None Include="highScores.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="high.xml" />
+    <None Include="Resources\high.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

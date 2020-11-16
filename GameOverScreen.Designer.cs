@@ -58,7 +58,7 @@
             this.subtitleLabel.BackColor = System.Drawing.Color.Transparent;
             this.subtitleLabel.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.subtitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.subtitleLabel.Location = new System.Drawing.Point(387, 163);
+            this.subtitleLabel.Location = new System.Drawing.Point(393, 160);
             this.subtitleLabel.Name = "subtitleLabel";
             this.subtitleLabel.Size = new System.Drawing.Size(471, 176);
             this.subtitleLabel.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.playButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.playButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.Location = new System.Drawing.Point(915, 627);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(351, 186);
@@ -78,6 +78,7 @@
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Visible = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            this.playButton.Enter += new System.EventHandler(this.playButton_Enter);
             // 
             // scoreLabel
             // 
@@ -96,7 +97,7 @@
             this.menuButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.menuButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.Location = new System.Drawing.Point(478, 627);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(351, 186);
@@ -105,13 +106,14 @@
             this.menuButton.UseVisualStyleBackColor = false;
             this.menuButton.Visible = false;
             this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.menuButton.Enter += new System.EventHandler(this.menuButton_Enter);
             // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exitButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(53, 627);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(351, 186);
@@ -120,6 +122,7 @@
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Visible = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
             // scoreText
             // 
@@ -127,7 +130,7 @@
             this.scoreText.BackColor = System.Drawing.Color.Transparent;
             this.scoreText.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scoreText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.scoreText.Location = new System.Drawing.Point(520, 322);
+            this.scoreText.Location = new System.Drawing.Point(522, 303);
             this.scoreText.Name = "scoreText";
             this.scoreText.Size = new System.Drawing.Size(0, 176);
             this.scoreText.TabIndex = 7;

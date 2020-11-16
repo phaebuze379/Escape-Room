@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Escape_Room
 {
     public partial class GameOverScreen : UserControl
     {
 
-        public static string name;
-        public int score;
+        public static string name, score;
 
         public static List<Score> scores = new List<Score>();
 
         public GameOverScreen()
         {
             InitializeComponent();
-            scoreText.Text = 200 + "";
+            scoreText.Text = GameScreen.scoreCounter/20 + "";
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -49,22 +49,54 @@ namespace Escape_Room
             Application.Exit();
         }
 
+        private void playButton_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuButton_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitButton_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void addButton_Click(object sender, EventArgs e)
         {
-            name = textBox.Text;
-            score = Convert.ToInt32(scoreText.Text);
-            Score highscore = new Score(score, name);
-
-
-
-            scores.Add(highscore);
-
             nameLabel.Visible = false;
             textBox.Visible = false;
             addButton.Visible = false;
             exitButton.Visible = true;
             menuButton.Visible = true;
             playButton.Visible = true;
+
+            name = textBox.Text;
+            score = scoreText.Text;
+            Score highscore = new Score(score, name);
+            scores.Add(highscore);
+
+            XmlWriter writer = XmlWriter.Create("Resources/high.xml", null);
+
+            // start writer
+            writer.WriteStartElement("scores");
+
+            // write every score in high score list
+            foreach (Score s in scores)
+            {
+                writer.WriteElementString("name", s.name);
+                writer.WriteElementString("score", s.score);
+                
+            }
+
+            // end and close writer
+            writer.WriteEndElement();
+            writer.Close();
+        }
+
+       
         }
     }
-}
+

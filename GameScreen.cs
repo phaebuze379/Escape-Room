@@ -51,6 +51,9 @@ namespace Escape_Room
 
         public static int levelCounter = 3;
 
+        public static int scoreCounter = 0;
+
+
         public GameScreen()
         {
             InitializeComponent();
@@ -191,7 +194,7 @@ namespace Escape_Room
                         taskwidthx = Convert.ToInt32(taskwidth);
                         taskheighty = Convert.ToInt32(taskheight);
                         Task b = new Task(taskColour, taskintX, taskintY, taskwidthx, taskheighty);
-                        tasks.Add(b);
+                        //tasks.Add(b);
                     }
                     c++;
                 }
@@ -226,9 +229,10 @@ namespace Escape_Room
                 //close reader
                 reader.Close();
             }
-            else
+            else if (levelCounter > 3)
             {
                 timer1.Stop();
+                levelCounter = 1;
                 Form f = this.FindForm();
                 f.Controls.Remove(this);
                 GameOverScreen gs = new GameOverScreen();
@@ -241,6 +245,7 @@ namespace Escape_Room
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            scoreCounter++;
 
             if (leftArrowDown == true)
             {

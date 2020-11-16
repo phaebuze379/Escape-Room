@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<score>
+<scores>
   <name>Phaedra</name>
   <score>400</score>
-</score>
+  <name>Cleo</name>
+  <score>500</score>
+</scores>

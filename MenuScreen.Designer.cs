@@ -63,7 +63,7 @@
             this.playButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.playButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.Location = new System.Drawing.Point(941, 557);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(351, 186);
@@ -71,13 +71,14 @@
             this.playButton.Text = "PLAY";
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.button1_Click);
+            this.playButton.Enter += new System.EventHandler(this.playButton_Enter);
             // 
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.exitButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(69, 557);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(351, 186);
@@ -85,13 +86,14 @@
             this.exitButton.Text = "EXIT";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
             // highButton
             // 
             this.highButton.BackColor = System.Drawing.Color.SaddleBrown;
             this.highButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.highButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.highButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highButton.Location = new System.Drawing.Point(507, 557);
             this.highButton.Name = "highButton";
             this.highButton.Size = new System.Drawing.Size(351, 186);
@@ -99,6 +101,7 @@
             this.highButton.Text = "HIGHSCORES";
             this.highButton.UseVisualStyleBackColor = false;
             this.highButton.Click += new System.EventHandler(this.highButton_Click);
+            this.highButton.Enter += new System.EventHandler(this.highButton_Enter);
             // 
             // pictureBox1
             // 
