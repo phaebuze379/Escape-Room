@@ -126,9 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\backgroundMap.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\map.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -136,9 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\button 2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\room 3.jpg" />
@@ -159,9 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EscapeKey1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageedit_2_7642782516.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Level2.xml">
@@ -205,6 +196,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\duck - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level5.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Level4.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EscapeKey5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EscapeKey4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Door5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\escape door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spyglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\feet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

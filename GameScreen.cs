@@ -46,7 +46,7 @@ namespace Escape_Room
         public Door door;
         public Key key;
 
-        public static int taskCounter = 2;
+        public static int taskCounter = 3;
         public static string taskColour;
 
         public static int levelCounter = 3;
@@ -101,7 +101,7 @@ namespace Escape_Room
 
         public void onStart()
         {
-
+            level();
 
             //set all button presses to false.
             leftArrowDown = rightArrowDown = false;
@@ -115,7 +115,7 @@ namespace Escape_Room
                     door = new Door(600, 525, 180, 230);
                     break;
                 case 3:
-                    door = new Door(585 , 325, 180, 230);
+                    door = new Door(585, 325, 180, 230);
                     break;
             }
 
@@ -131,100 +131,112 @@ namespace Escape_Room
                     hero = new Hero(1000, 60, 30, 50);
                     break;
             }
-            level();
+           
         }
 
         public void level()
         {
-            //current level
-            complete = false;
-
-            //variables for block x and y values
-            string blockX;
-            string blockY;
-            string width;
-            string height;
-
-            string taskblockX;
-            string taskblockY;
-            string taskwidth;
-            string taskheight;
-
-            int intX;
-            int intY;
-            int widthx;
-            int heighty;
-
-            int taskintX;
-            int taskintY;
-            int taskwidthx;
-            int taskheighty;
-
-            // create xml reader
-            XmlReader reader = XmlReader.Create("Resources/" + "level" + Convert.ToString(levelCounter) + ".xml");
-
-            int c = 0;
-            reader.ReadStartElement("level");
-            reader.ReadToFollowing("tasks");
-            while (c < 3)
+            if (levelCounter <= 3)
             {
-                reader.ReadToFollowing("colour");
-                taskColour = reader.ReadString();
+                //current level
+                complete = false;
 
-                reader.ReadToFollowing("x");
-                taskblockX = reader.ReadString();
+                //variables for block x and y values
+                string blockX;
+                string blockY;
+                string width;
+                string height;
 
-                reader.ReadToFollowing("y");
-                taskblockY = reader.ReadString();
+                string taskblockX;
+                string taskblockY;
+                string taskwidth;
+                string taskheight;
 
-                reader.ReadToFollowing("width");
-                taskwidth = reader.ReadString();
+                int intX;
+                int intY;
+                int widthx;
+                int heighty;
 
-                reader.ReadToFollowing("height");
-                taskheight = reader.ReadString();
-                if (taskColour != "")
+                int taskintX;
+                int taskintY;
+                int taskwidthx;
+                int taskheighty;
+
+                // create xml reader
+                XmlReader reader = XmlReader.Create("Resources/" + "level" + Convert.ToString(levelCounter) + ".xml");
+
+                int c = 0;
+                reader.ReadStartElement("level");
+                reader.ReadToFollowing("tasks");
+                while (c < 3)
                 {
-                    taskintX = Convert.ToInt32(taskblockX);
-                    taskintY = Convert.ToInt32(taskblockY);
-                    taskwidthx = Convert.ToInt32(taskwidth);
-                    taskheighty = Convert.ToInt32(taskheight);
-                    Task b = new Task(taskColour, taskintX, taskintY, taskwidthx, taskheighty);
-                    tasks.Add(b);
-                }
-                c++;
-            }
+                    reader.ReadToFollowing("colour");
+                    taskColour = reader.ReadString();
 
-            reader.ReadToFollowing("walls");
-            //Grabs all the walla for the walls and adds them to the list
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Text)
-                {
-                    blockX = reader.ReadString();
+                    reader.ReadToFollowing("x");
+                    taskblockX = reader.ReadString();
 
                     reader.ReadToFollowing("y");
-                    blockY = reader.ReadString();
+                    taskblockY = reader.ReadString();
 
                     reader.ReadToFollowing("width");
-                    width = reader.ReadString();
+                    taskwidth = reader.ReadString();
 
                     reader.ReadToFollowing("height");
-                    height = reader.ReadString();
-                    if (blockX != "")
+                    taskheight = reader.ReadString();
+                    if (taskColour != "")
                     {
-                        intX = Convert.ToInt32(blockX);
-                        intY = Convert.ToInt32(blockY);
-                        widthx = Convert.ToInt32(width);
-                        heighty = Convert.ToInt32(height);
-                        Wall b = new Wall(intX, intY, widthx, heighty);
-                        walls.Add(b);
+                        taskintX = Convert.ToInt32(taskblockX);
+                        taskintY = Convert.ToInt32(taskblockY);
+                        taskwidthx = Convert.ToInt32(taskwidth);
+                        taskheighty = Convert.ToInt32(taskheight);
+                        Task b = new Task(taskColour, taskintX, taskintY, taskwidthx, taskheighty);
+                        tasks.Add(b);
+                    }
+                    c++;
+                }
+
+                reader.ReadToFollowing("walls");
+                //Grabs all the walla for the walls and adds them to the list
+                while (reader.Read())
+                {
+                    if (reader.NodeType == XmlNodeType.Text)
+                    {
+                        blockX = reader.ReadString();
+
+                        reader.ReadToFollowing("y");
+                        blockY = reader.ReadString();
+
+                        reader.ReadToFollowing("width");
+                        width = reader.ReadString();
+
+                        reader.ReadToFollowing("height");
+                        height = reader.ReadString();
+                        if (blockX != "")
+                        {
+                            intX = Convert.ToInt32(blockX);
+                            intY = Convert.ToInt32(blockY);
+                            widthx = Convert.ToInt32(width);
+                            heighty = Convert.ToInt32(height);
+                            Wall b = new Wall(intX, intY, widthx, heighty);
+                            walls.Add(b);
+                        }
                     }
                 }
+                //close reader
+                reader.Close();
             }
-            //close reader
-            reader.Close();
+            else
+            {
+                timer1.Stop();
+                Form f = this.FindForm();
+                f.Controls.Remove(this);
+                GameOverScreen gs = new GameOverScreen();
+                f.Controls.Add(gs);
+                gs.Location = new Point((this.Width - gs.Width) / 2, (this.Height - gs.Height) / 2);
+                gs.Focus();
+            }
         }
-
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -292,10 +304,10 @@ namespace Escape_Room
 
                 stop = true;
                 hero.hasKey = false;
-                levelCounter++;
                 walls.Clear();
                 tasks.Clear();
                 taskCounter = 3;
+                levelCounter++;
                 onStart();
 
             }

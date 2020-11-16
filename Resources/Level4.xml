@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <tasks>
+    <task>
+      <colour>yellow</colour>
+      <x>300</x>
+      <y>400</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+    <task>
+      <colour>lightgreen</colour>
+      <x>1000</x>
+      <y>300</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+    <task>
+      <colour>purple</colour>
+      <x>1000</x>
+      <y>500</y>
+      <width>50</width>
+      <height>50</height>
+    </task>
+  </tasks>
+  <walls>
+    <wall>
+      <x> 35</x>
+      <y> 35</y>
+      <width> 1315</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 35</x>
+      <y> 750</y>
+      <width> 1315</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 35</x>
+      <y> 35</y>
+      <width> 5</width>
+      <height> 715</height>
+    </wall>
+    <wall>
+      <x> 1350</x>
+      <y> 35</y>
+      <width> 5</width>
+      <height> 720</height>
+    </wall>
+    <wall>
+      <x> 400</x>
+      <y> 150</y>
+      <width> 5</width>
+      <height> 600</height>
+    </wall>
+    <wall>
+      <x> 40</x>
+      <y> 650</y>
+      <width> 250</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 155</x>
+      <y> 550</y>
+      <width> 250</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 40</x>
+      <y> 450</y>
+      <width> 250</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 155</x>
+      <y> 340</y>
+      <width> 250</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 40</x>
+      <y> 240</y>
+      <width> 250</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 800</x>
+      <y> 150</y>
+      <width> 5</width>
+      <height> 600</height>
+    </wall>
+    <wall>
+      <x> 460</x>
+      <y> 240</y>
+      <width> 200</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 460</x>
+      <y> 240</y>
+      <width> 5</width>
+      <height> 65</height>
+    </wall>
+    <wall>
+      <x> 460</x>
+      <y> 400</y>
+      <width> 200</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 625</x>
+      <y> 315</y>
+      <width> 175</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 550</x>
+      <y> 310</y>
+      <width> 5</width>
+      <height> 90</height>
+    </wall>
+    <wall>
+      <x> 655</x>
+      <y> 400</y>
+      <width> 5</width>
+      <height> 65</height>
+    </wall>
+    <wall>
+      <x> 405</x>
+      <y> 460</y>
+      <width> 255</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 490</x>
+      <y> 460</y>
+      <width> 5</width>
+      <height> 125</height>
+    </wall>
+    <wall>
+      <x> 625</x>
+      <y> 600</y>
+      <width> 175</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 560</x>
+      <y> 560</y>
+      <width> 5</width>
+      <height> 125</height>
+    </wall>
+    <wall>
+      <x> 405</x>
+      <y> 685</y>
+      <width> 160</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 840</x>
+      <y> 650</y>
+      <width> 195</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1110</x>
+      <y> 650</y>
+      <width> 195</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1305</x>
+      <y> 155</y>
+      <width> 5</width>
+      <height> 500</height>
+    </wall>
+    <wall>
+      <x> 840</x>
+      <y> 155</y>
+      <width> 5</width>
+      <height> 500</height>
+    </wall>
+    <wall>
+      <x> 920</x>
+      <y> 170</y>
+      <width> 5</width>
+      <height> 400</height>
+    </wall>
+    <wall>
+      <x> 925</x>
+      <y> 565</y>
+      <width> 305</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1230</x>
+      <y> 170</y>
+      <width> 5</width>
+      <height> 400</height>
+    </wall>
+    <wall>
+      <x> 960</x>
+      <y> 520</y>
+      <width> 230</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 960</x>
+      <y> 450</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1120</x>
+      <y> 450</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1035</x>
+      <y> 380</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 960</x>
+      <y> 310</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1120</x>
+      <y> 310</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1035</x>
+      <y> 230</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 1120</x>
+      <y> 160</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+    <wall>
+      <x> 960</x>
+      <y> 160</y>
+      <width> 60</width>
+      <height> 5</height>
+    </wall>
+  </walls>
+
+</level>

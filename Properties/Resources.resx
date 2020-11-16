@@ -124,6 +124,12 @@
   <data name="Door2__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Door2 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Door4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Door4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Door5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Door5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Door_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Door 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,6 +151,18 @@
   <data name="EscapeKey2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EscapeKey2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EscapeKey4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EscapeKey4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EscapeKey5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EscapeKey5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="escape_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\escape door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="floor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\floor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,6 +175,12 @@
   <data name="Level3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Level3.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="Level4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Level4.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="Level5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Level5.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="map" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,6 +189,9 @@
   </data>
   <data name="rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spyglass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spyglass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sun" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

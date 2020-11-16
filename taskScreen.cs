@@ -122,7 +122,7 @@ namespace Escape_Room
         public void taskBlack()
         {
             Label.Text = "DO NOT CLICK THE BUTTON ;)";
-            pictureBox1.Visible = true;
+            button.Visible = true;
         }
 
         public void taskYellow()
@@ -142,29 +142,41 @@ namespace Escape_Room
         public void taskLightGreen()
         {
             label1.Visible = true;
-            button4.Visible = true;
-            button5.Visible = true;
+            leftButton.Visible = true;
+            rightButton.Visible = true;
             Label.Text = "L R R L R";
         }
 
         public void taskPurple()
         {
-
+            label1.Visible = true;
+            doorBox1.Visible = true;
+            doorBox2.Visible = true;
+            doorBox3.Visible = true;
+            doorBox4.Visible = true;
+            doorBox5.Visible = true;
+            doorBox6.Visible = true;
+            doorBox7.Visible = true;
+            doorBox8.Visible = true;
+            doorBox9.Visible = true;
+            doorBox10.Visible = true;
+            doorBox11.Visible = true;
+            doorBox12.Visible = true;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void sunBox_Click(object sender, EventArgs e)
         {
             pic1 = true;
             sunBox.BackColor = Color.Green;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void rainBox_Click(object sender, EventArgs e)
         {
             pic2 = true;
             rainBox.BackColor = Color.Red;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void sunBox2_Click(object sender, EventArgs e)
         {
             pic3 = true;
             sunBox2.BackColor = Color.Green;
@@ -236,6 +248,42 @@ namespace Escape_Room
                 colour2 = "pink";
                 button2.BackColor = Color.Pink;
                 counter2 = -1;
+            }
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
+            Boolean click = true;
+            if (click == true)
+            {
+                counter3++;
+                click = false;
+            }
+
+
+            if (counter3 == 0)
+            {
+                button3.BackColor = Color.DarkGray;
+            }
+            if (counter3 == 1)
+            {
+                button3.BackColor = Color.Blue;
+            }
+
+            if (counter3 == 2)
+            {
+                button3.BackColor = Color.Green;
+            }
+
+            if (counter3 == 3)
+            {
+                colour3 = "pink";
+                button3.BackColor = Color.Pink;
+                counter3 = -1;
             }
 
 
@@ -379,7 +427,7 @@ namespace Escape_Room
             }
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void doorBox6_Click(object sender, EventArgs e)
         {
             GameScreen.taskCounter++;
             foreach (Task t in GameScreen.tasks)
@@ -400,7 +448,7 @@ namespace Escape_Room
             f.Controls.Remove(this);
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void button_Click(object sender, EventArgs e)
         {
             GameScreen.taskCounter++;
             foreach (Task t in GameScreen.tasks)
@@ -421,7 +469,7 @@ namespace Escape_Room
             f.Controls.Remove(this);
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void buttonLeft_Click(object sender, EventArgs e)
         {
             if (leftCount == 0)
             {
@@ -446,7 +494,7 @@ namespace Escape_Room
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void buttonRight_Click(object sender, EventArgs e)
         {
             if (leftCount == 1)
             {
@@ -563,65 +611,26 @@ namespace Escape_Room
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void doorBox10_Click(object sender, EventArgs e)
         {
-
-
-            Boolean click = true;
-            if (click == true)
+            GameScreen.taskCounter++;
+            foreach (Task t in GameScreen.tasks)
             {
-                counter3++;
-                click = false;
-            }
-
-
-            if (counter3 == 0)
-            {
-                button3.BackColor = Color.DarkGray;
-            }
-            if (counter3 == 1)
-            {
-                button3.BackColor = Color.Blue;
-            }
-
-            if (counter3 == 2)
-            {
-                button3.BackColor = Color.Green;
-            }
-
-            if (counter3 == 3)
-            {
-                colour3 = "pink";
-                button3.BackColor = Color.Pink;
-                counter3 = -1;
-            }
-
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            string code = textBox1.Text;
-            if (code == "26793")
-            {
-                GameScreen.taskCounter++;
-                foreach (Task t in GameScreen.tasks)
+                if (t.colour == "purple")
                 {
-                    if (t.colour == "red")
-                    {
-                        GameScreen.tasks.Remove(t);
-                        break;
-                    }
-                    else
-                    {
-
-                    }
+                    GameScreen.tasks.Remove(t);
+                    break;
+                }
+                else
+                {
 
                 }
 
-                Form f = this.FindForm();
-                f.Controls.Remove(this);
             }
+
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
         }
+
     }
 }
