@@ -83,6 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Score.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="taskScreen.cs">
       <SubType>UserControl</SubType>
@@ -227,6 +228,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\feet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="highScores.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="high.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

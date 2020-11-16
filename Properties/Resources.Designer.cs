@@ -222,6 +222,29 @@ namespace Escape_Room.Properties {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;score&gt;
+        ///  &lt;name&gt;Phaedra&lt;/name&gt;
+        ///  &lt;score&gt;400&lt;/score&gt;
+        ///&lt;/score&gt;.
+        /// </summary>
+        internal static string high {
+            get {
+                return ResourceManager.GetString("high", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap key {
+            get {
+                object obj = ResourceManager.GetObject("key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
         ///&lt;level&gt;
         ///  &lt;tasks&gt;
         ///    &lt;task&gt;
@@ -407,6 +430,16 @@ namespace Escape_Room.Properties {
         internal static System.Drawing.Bitmap map_1 {
             get {
                 object obj = ResourceManager.GetObject("map_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person {
+            get {
+                object obj = ResourceManager.GetObject("person", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

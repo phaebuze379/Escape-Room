@@ -30,10 +30,14 @@
         {
             this.titleLabel = new System.Windows.Forms.Label();
             this.subtitleLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
+            this.scoreLabel = new System.Windows.Forms.Label();
+            this.menuButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.scoreText = new System.Windows.Forms.Label();
+            this.addButton = new System.Windows.Forms.Button();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -60,56 +64,107 @@
             this.subtitleLabel.TabIndex = 2;
             this.subtitleLabel.Text = "You Escaped!";
             // 
-            // button1
+            // playButton
             // 
-            this.button1.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(915, 385);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(351, 186);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "PLAY AGAIN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.playButton.BackColor = System.Drawing.Color.SaddleBrown;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.playButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.Location = new System.Drawing.Point(915, 627);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(351, 186);
+            this.playButton.TabIndex = 3;
+            this.playButton.Text = "PLAY AGAIN";
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Visible = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // label1
+            // scoreLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(239, 654);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 176);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "SCORE:";
+            this.scoreLabel.AutoSize = true;
+            this.scoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.scoreLabel.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.scoreLabel.Location = new System.Drawing.Point(187, 322);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(309, 176);
+            this.scoreLabel.TabIndex = 4;
+            this.scoreLabel.Text = "SCORE:";
             // 
-            // button2
+            // menuButton
             // 
-            this.button2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(464, 385);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(351, 186);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "MENU";
-            this.button2.UseVisualStyleBackColor = false;
+            this.menuButton.BackColor = System.Drawing.Color.SaddleBrown;
+            this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.menuButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButton.Location = new System.Drawing.Point(478, 627);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(351, 186);
+            this.menuButton.TabIndex = 5;
+            this.menuButton.Text = "MENU";
+            this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Visible = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
-            // button3
+            // exitButton
             // 
-            this.button3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(53, 385);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(351, 186);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "EXIT";
-            this.button3.UseVisualStyleBackColor = false;
+            this.exitButton.BackColor = System.Drawing.Color.SaddleBrown;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exitButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(53, 627);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(351, 186);
+            this.exitButton.TabIndex = 6;
+            this.exitButton.Text = "EXIT";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Visible = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // scoreText
+            // 
+            this.scoreText.AutoSize = true;
+            this.scoreText.BackColor = System.Drawing.Color.Transparent;
+            this.scoreText.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.scoreText.Location = new System.Drawing.Point(520, 322);
+            this.scoreText.Name = "scoreText";
+            this.scoreText.Size = new System.Drawing.Size(0, 176);
+            this.scoreText.TabIndex = 7;
+            // 
+            // addButton
+            // 
+            this.addButton.BackColor = System.Drawing.Color.SaddleBrown;
+            this.addButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addButton.Location = new System.Drawing.Point(538, 627);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(213, 77);
+            this.addButton.TabIndex = 8;
+            this.addButton.Text = "ADD";
+            this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Font = new System.Drawing.Font("Gabriola", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.nameLabel.Location = new System.Drawing.Point(229, 438);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(267, 176);
+            this.nameLabel.TabIndex = 9;
+            this.nameLabel.Text = "Name:";
+            // 
+            // textBox
+            // 
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Location = new System.Drawing.Point(497, 482);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(332, 89);
+            this.textBox.TabIndex = 10;
             // 
             // GameOverScreen
             // 
@@ -117,10 +172,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Escape_Room.Properties.Resources.map_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.scoreText);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.menuButton);
+            this.Controls.Add(this.scoreLabel);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.subtitleLabel);
             this.Controls.Add(this.titleLabel);
             this.DoubleBuffered = true;
@@ -135,9 +194,13 @@
 
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label subtitleLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Button menuButton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label scoreText;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox textBox;
     }
 }
