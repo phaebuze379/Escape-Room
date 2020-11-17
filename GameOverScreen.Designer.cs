@@ -38,6 +38,7 @@
             this.addButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLabel
@@ -70,7 +71,7 @@
             this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.playButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(915, 627);
+            this.playButton.Location = new System.Drawing.Point(497, 627);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(351, 186);
             this.playButton.TabIndex = 3;
@@ -98,7 +99,7 @@
             this.menuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.menuButton.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.Location = new System.Drawing.Point(478, 627);
+            this.menuButton.Location = new System.Drawing.Point(941, 627);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(351, 186);
             this.menuButton.TabIndex = 5;
@@ -141,7 +142,7 @@
             this.addButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addButton.Font = new System.Drawing.Font("Gabriola", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.Location = new System.Drawing.Point(538, 627);
+            this.addButton.Location = new System.Drawing.Point(538, 636);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(213, 77);
             this.addButton.TabIndex = 8;
@@ -169,12 +170,25 @@
             this.textBox.Size = new System.Drawing.Size(332, 89);
             this.textBox.TabIndex = 10;
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorLabel.Font = new System.Drawing.Font("Gabriola", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.Location = new System.Drawing.Point(528, 574);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(245, 59);
+            this.errorLabel.TabIndex = 11;
+            this.errorLabel.Text = "Please Input a Name";
+            this.errorLabel.Visible = false;
+            // 
             // GameOverScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Escape_Room.Properties.Resources.map_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.addButton);
@@ -205,5 +219,6 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

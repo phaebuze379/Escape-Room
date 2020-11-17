@@ -39,6 +39,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             this.scoresLabel = new System.Windows.Forms.Label();
+            this.subtitleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,7 +53,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.Transparent;
             this.titleLabel.Font = new System.Drawing.Font("Gabriola", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.titleLabel.Location = new System.Drawing.Point(330, 0);
+            this.titleLabel.Location = new System.Drawing.Point(337, -22);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(684, 221);
             this.titleLabel.TabIndex = 0;
@@ -178,11 +179,24 @@
             this.scoresLabel.AutoSize = true;
             this.scoresLabel.BackColor = System.Drawing.Color.Transparent;
             this.scoresLabel.Font = new System.Drawing.Font("Gabriola", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoresLabel.Location = new System.Drawing.Point(402, 213);
+            this.scoresLabel.Location = new System.Drawing.Point(519, 235);
             this.scoresLabel.Name = "scoresLabel";
             this.scoresLabel.Size = new System.Drawing.Size(0, 103);
             this.scoresLabel.TabIndex = 10;
             this.scoresLabel.Visible = false;
+            // 
+            // subtitleLabel
+            // 
+            this.subtitleLabel.AutoSize = true;
+            this.subtitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.subtitleLabel.Font = new System.Drawing.Font("Gabriola", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.subtitleLabel.Location = new System.Drawing.Point(484, 124);
+            this.subtitleLabel.Name = "subtitleLabel";
+            this.subtitleLabel.Size = new System.Drawing.Size(325, 133);
+            this.subtitleLabel.TabIndex = 11;
+            this.subtitleLabel.Text = "High Scores";
+            this.subtitleLabel.Visible = false;
             // 
             // MenuScreen
             // 
@@ -190,6 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::Escape_Room.Properties.Resources.map_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.subtitleLabel);
             this.Controls.Add(this.scoresLabel);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.pictureBox5);
@@ -227,5 +242,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label scoresLabel;
+        private System.Windows.Forms.Label subtitleLabel;
     }
 }

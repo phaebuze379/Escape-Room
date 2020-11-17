@@ -199,16 +199,6 @@
     <None Include="Resources\duck - Copy.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Level5.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Level4.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\EscapeKey5.png" />
   </ItemGroup>
   <ItemGroup>
@@ -236,14 +226,33 @@
     <None Include="Resources\key.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="highScores.xml">
+    <None Include="Resources\high.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\high.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="Resources\TaskSound7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskSound4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LevelComplete.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThemeSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TaskSound5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalkingSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KeySound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wooden-stairs-1.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

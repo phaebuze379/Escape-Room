@@ -59,6 +59,7 @@
             this.doorBox8 = new System.Windows.Forms.PictureBox();
             this.doorBox9 = new System.Windows.Forms.PictureBox();
             this.doorBox11 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sunBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rainBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sunBox)).BeginInit();
@@ -388,7 +389,7 @@
             // 
             this.doorBox12.BackColor = System.Drawing.Color.Transparent;
             this.doorBox12.Image = global::Escape_Room.Properties.Resources.Door2__1_;
-            this.doorBox12.Location = new System.Drawing.Point(140, 244);
+            this.doorBox12.Location = new System.Drawing.Point(143, 244);
             this.doorBox12.Name = "doorBox12";
             this.doorBox12.Size = new System.Drawing.Size(148, 176);
             this.doorBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -432,11 +433,21 @@
             this.doorBox11.TabStop = false;
             this.doorBox11.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gabriola", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(246, 291);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 81);
+            this.label2.TabIndex = 35;
+            // 
             // taskScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.doorBox11);
             this.Controls.Add(this.doorBox9);
             this.Controls.Add(this.doorBox8);
@@ -527,5 +538,6 @@
         private System.Windows.Forms.PictureBox doorBox8;
         private System.Windows.Forms.PictureBox doorBox9;
         private System.Windows.Forms.PictureBox doorBox11;
+        private System.Windows.Forms.Label label2;
     }
 }

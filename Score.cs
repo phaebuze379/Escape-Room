@@ -8,9 +8,10 @@ namespace Escape_Room
 {
     public class Score
     {
-        public string name, score;
+        public int score;
+        public string name;
 
-        public Score( string _score, string _name)
+        public Score( int _score, string _name)
         {
             score = _score;
             name = _name;

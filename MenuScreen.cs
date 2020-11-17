@@ -17,54 +17,33 @@ namespace Escape_Room
         public MenuScreen()
         {
             InitializeComponent();
-            #region write
-            GameOverScreen.scores.Clear();
-            string playerName, playerScore;
-            int scores;
-
-            XmlReader reader = XmlReader.Create("Resources/high.xml");
-
-            reader.ReadStartElement("scores");
-            //Grabs all the walla for the walls and adds them to the list
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Text)
-                {
-                    playerName = reader.ReadString();
-
-                    reader.ReadToFollowing("score");
-                    playerScore = reader.ReadString();
-
-                    scores = Convert.ToInt32(playerScore);
-                    if (playerName != "")
-                    {
-                        Score score = new Score(playerScore, playerName);
-                        GameOverScreen.scores.Add(score);
-                    }
-                }
-            }
-            //close reader
-            reader.Close();
-            #endregion
+            //play theme music
+            Form1.theme.PlayLooping();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //when play button is clicked, go to GameScreen
             Form f = this.FindForm();
             f.Controls.Remove(this);
             GameScreen gs = new GameScreen();
             f.Controls.Add(gs);
+            gs.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - gs.Width) / 2,
+               (Screen.PrimaryScreen.WorkingArea.Height - gs.Height) / 2);
             gs.Focus();
 
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //exit
             Application.Exit();
         }
 
         private void highButton_Click(object sender, EventArgs e)
         {
+            //remove pictures and buttons
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
@@ -77,19 +56,22 @@ namespace Escape_Room
             backButton.Visible = true;
 
             scoresLabel.Visible = true;
-
-            scoresLabel.Text = "";
-            GameOverScreen.scores = GameOverScreen.scores.OrderBy(x => x.score).ToList();
-            foreach (Score s in GameOverScreen.scores)
-            {
-                scoresLabel.Text += s.name + "   " + s.score + "\n";
-            }
+            subtitleLabel.Visible = true;
 
             
+            scoresLabel.Text = "";
+            //sort the list
+            Form1.scores = Form1.scores.OrderBy(x => x.score).ToList();
+            //display top 5 high scores
+            for (int i = 0; i < 5; i++)
+            {
+                scoresLabel.Text += Form1.scores[i].name + "   " + Form1.scores[i].score + "\n";
+            }            
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
+            //re-add pictures and buttons
             pictureBox1.Visible = true;
             pictureBox2.Visible = true;
             pictureBox3.Visible = true;
@@ -102,21 +84,30 @@ namespace Escape_Room
             backButton.Visible = false;
 
             scoresLabel.Visible = false;
+            subtitleLabel.Visible = false;
         }
 
+        #region button colours
         private void playButton_Enter(object sender, EventArgs e)
         {
-           // playButton.BackColor = 
+            playButton.BackColor = Color.Tan;
+            highButton.BackColor = Color.SaddleBrown;
+            exitButton.BackColor = Color.SaddleBrown;
         }
 
         private void highButton_Enter(object sender, EventArgs e)
         {
-
+            playButton.BackColor = Color.SaddleBrown;
+            highButton.BackColor = Color.Tan;
+            exitButton.BackColor = Color.SaddleBrown;
         }
 
         private void exitButton_Enter(object sender, EventArgs e)
         {
-
+            playButton.BackColor = Color.SaddleBrown;
+            highButton.BackColor = Color.SaddleBrown;
+            exitButton.BackColor = Color.Tan;
         }
+        #endregion
     }
 }
